@@ -48,14 +48,12 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Wh3-sn-bEW" firstAttribute="leading" secondItem="4DJ-3G-VMS" secondAttribute="leadingMargin" constant="134.5" id="2vd-ys-RAK"/>
+                                                <constraint firstItem="Wh3-sn-bEW" firstAttribute="centerX" secondItem="4DJ-3G-VMS" secondAttribute="centerX" id="2mj-0F-Lpw"/>
                                                 <constraint firstAttribute="trailing" secondItem="YHf-GF-YDl" secondAttribute="trailing" id="5vr-fY-jaR"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Wh3-sn-bEW" secondAttribute="bottom" constant="62.5" id="Duk-gp-vzz"/>
                                                 <constraint firstItem="YHf-GF-YDl" firstAttribute="top" secondItem="4DJ-3G-VMS" secondAttribute="top" constant="3" id="Gx5-93-wxI"/>
+                                                <constraint firstItem="Wh3-sn-bEW" firstAttribute="centerY" secondItem="4DJ-3G-VMS" secondAttribute="centerY" id="OPY-B9-4f5"/>
                                                 <constraint firstItem="YHf-GF-YDl" firstAttribute="leading" secondItem="4DJ-3G-VMS" secondAttribute="leading" id="b3W-KI-4WV"/>
                                                 <constraint firstAttribute="bottom" secondItem="YHf-GF-YDl" secondAttribute="bottom" constant="3" id="cYb-x3-fog"/>
-                                                <constraint firstItem="Wh3-sn-bEW" firstAttribute="top" secondItem="4DJ-3G-VMS" secondAttribute="topMargin" constant="62.5" id="l8a-Oh-bdr"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Wh3-sn-bEW" secondAttribute="trailing" constant="134.5" id="zGc-NI-bMG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -80,17 +78,17 @@
                     <navigationItem key="navigationItem" title="Sounders Shop" id="boh-Rk-GO6"/>
                     <connections>
                         <outlet property="categoryTable" destination="B96-SK-X9w" id="W66-q3-Rkc"/>
-                        <segue destination="Sqh-95-jMu" kind="show" id="Ju2-k4-YS7"/>
+                        <segue destination="Sqh-95-jMu" kind="show" identifier="ProductsVC" id="Ju2-k4-YS7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="95.652173913043484" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductsVC-->
         <scene sceneID="MiT-SS-Dnt">
             <objects>
-                <viewController id="Sqh-95-jMu" sceneMemberID="viewController">
+                <viewController id="Sqh-95-jMu" customClass="ProductsVC" customModule="sounders_store" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z67-nx-u0h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,57 +103,57 @@
                                 <rect key="frame" x="0.0" y="143" width="414" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UE6-7m-cVL">
-                                    <size key="itemSize" width="191" height="243"/>
+                                    <size key="itemSize" width="194" height="276"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dhz-oI-cMd" customClass="ProductCell" customModule="sounders_store" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="191" height="243"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="u32-7b-Aii">
-                                            <rect key="frame" x="0.0" y="0.0" width="191" height="243"/>
+                                    <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="dhz-oI-cMd" customClass="ProductCell" customModule="sounders_store" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="276"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="u32-7b-Aii" customClass="ProductCell" customModule="sounders_store" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="194" height="276"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jersey" translatesAutoresizingMaskIntoConstraints="NO" id="9uF-3D-k3c">
-                                                    <rect key="frame" x="8" y="8" width="175" height="149"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jersey" translatesAutoresizingMaskIntoConstraints="NO" id="SbK-pe-2Zx" customClass="jer">
+                                                    <rect key="frame" x="8" y="8" width="178" height="196"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="175" id="6Yj-sb-raa"/>
-                                                        <constraint firstAttribute="height" constant="149" id="DUJ-fA-koD"/>
+                                                        <constraint firstAttribute="width" constant="178" id="Cpj-Bb-LbZ"/>
+                                                        <constraint firstAttribute="height" constant="196" id="tOd-Hc-Moy"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sounders Home Jersey" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Av2-vz-NYZ">
-                                                    <rect key="frame" x="8" y="160" width="175" height="41"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="175" id="bPz-M0-VkF"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sounders Green Jersey" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPp-YP-oCh">
+                                                    <rect key="frame" x="8" y="221" width="178" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$25.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltP-65-BZI">
-                                                    <rect key="frame" x="8" y="204" width="55" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$19.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVg-Ck-aGL">
+                                                    <rect key="frame" x="8" y="250" width="178" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ltP-65-BZI" firstAttribute="leading" secondItem="u32-7b-Aii" secondAttribute="leadingMargin" id="Ccs-uu-rXq"/>
-                                                <constraint firstItem="Av2-vz-NYZ" firstAttribute="top" secondItem="9uF-3D-k3c" secondAttribute="bottom" constant="3" id="ctE-on-izz"/>
-                                                <constraint firstItem="ltP-65-BZI" firstAttribute="top" secondItem="Av2-vz-NYZ" secondAttribute="bottom" constant="3" id="hGU-o8-Dpj"/>
-                                                <constraint firstAttribute="trailing" secondItem="9uF-3D-k3c" secondAttribute="trailing" constant="8" id="jdZ-ga-xZC"/>
-                                                <constraint firstItem="9uF-3D-k3c" firstAttribute="leading" secondItem="u32-7b-Aii" secondAttribute="leading" constant="8" id="o6u-bU-KNc"/>
-                                                <constraint firstItem="Av2-vz-NYZ" firstAttribute="leading" secondItem="u32-7b-Aii" secondAttribute="leadingMargin" id="rz8-ff-VPY"/>
-                                                <constraint firstItem="9uF-3D-k3c" firstAttribute="top" secondItem="u32-7b-Aii" secondAttribute="top" constant="8" id="z5x-Ig-u81"/>
+                                                <constraint firstAttribute="trailing" secondItem="PPp-YP-oCh" secondAttribute="trailing" constant="8" id="3sh-YF-IhR"/>
+                                                <constraint firstItem="SbK-pe-2Zx" firstAttribute="leading" secondItem="u32-7b-Aii" secondAttribute="leading" constant="8" id="FmF-pF-yK7"/>
+                                                <constraint firstAttribute="trailing" secondItem="IVg-Ck-aGL" secondAttribute="trailing" constant="8" id="JLb-an-1Uk"/>
+                                                <constraint firstItem="SbK-pe-2Zx" firstAttribute="top" secondItem="u32-7b-Aii" secondAttribute="top" constant="8" id="OJl-sJ-eet"/>
+                                                <constraint firstItem="IVg-Ck-aGL" firstAttribute="top" secondItem="PPp-YP-oCh" secondAttribute="bottom" constant="8.5" id="Tsr-Y7-2yb"/>
+                                                <constraint firstItem="PPp-YP-oCh" firstAttribute="leading" secondItem="u32-7b-Aii" secondAttribute="leading" constant="8" id="W5s-Fc-8Je"/>
+                                                <constraint firstItem="IVg-Ck-aGL" firstAttribute="leading" secondItem="u32-7b-Aii" secondAttribute="leading" constant="8" id="XUF-3T-unJ"/>
+                                                <constraint firstItem="PPp-YP-oCh" firstAttribute="top" secondItem="SbK-pe-2Zx" secondAttribute="bottom" constant="17" id="b1l-m9-O9J"/>
+                                                <constraint firstAttribute="trailing" secondItem="SbK-pe-2Zx" secondAttribute="trailing" constant="8" id="uZ6-q7-jbO"/>
+                                                <constraint firstItem="PPp-YP-oCh" firstAttribute="top" secondItem="SbK-pe-2Zx" secondAttribute="bottom" constant="17" id="z3b-OS-85D"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="191" height="243"/>
+                                        <size key="customSize" width="194" height="276"/>
                                         <connections>
-                                            <outlet property="productImage" destination="9uF-3D-k3c" id="eG5-Af-hXt"/>
-                                            <outlet property="productPrice" destination="ltP-65-BZI" id="OM0-xg-MsS"/>
-                                            <outlet property="productTitle" destination="Av2-vz-NYZ" id="QbL-BK-HwD"/>
+                                            <outlet property="productImage" destination="SbK-pe-2Zx" id="P74-Xd-yGL"/>
+                                            <outlet property="productPrice" destination="IVg-Ck-aGL" id="9gF-dq-grj"/>
+                                            <outlet property="productTitle" destination="PPp-YP-oCh" id="qgz-88-4wf"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -173,6 +171,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fYe-WD-Qc1"/>
+                    <connections>
+                        <outlet property="productsCollection" destination="t4b-BD-Aw2" id="6pv-2u-TDc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0c-6l-F15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
